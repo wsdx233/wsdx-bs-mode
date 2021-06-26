@@ -21,6 +21,28 @@
             "6b8df3893d41ba77866756d5137da351"
          ],
          "name": "最终杀敌战-加强版-无护盾"
+      },
+      {
+         "author": "Wsdx233",
+         "files": [
+            "UnlockPro.py"
+         ],
+         "info": "[1.4]解锁炸队专业版，仅供交流学习使用",
+         "md5s": [
+            "bd918dd2a824a202de5f923c41902058"
+         ],
+         "name": "专业版解锁-1.4"
+      },
+      {
+         "author": "Mr.Smoothy",
+         "files": [
+            "UnlockPro_updated.py"
+         ],
+         "info": "[1.5]解锁炸队专业版，仅供交流学习使用",
+         "md5s": [
+            "aa19778c99f1c594d1da4be6121a8b59"
+         ],
+         "name": "专业版解锁-1.5"
       }
    ],
    "num": 2
