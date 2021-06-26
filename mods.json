@@ -1,0 +1,27 @@
+{
+   "mods": [
+      {
+         "author": "Deva",
+         "files": [
+            "thank_you_obf.py"
+         ],
+         "info": "众筹玩家可以安装使用，连接IP请输入1.1.1.1进入魔法服或1.1.1.2进入吃鸡服，不是众筹玩家下了也没用哦",
+         "md5s": [
+            "98b394209dbe40e9496a4ee70b23398e"
+         ],
+         "name": "众筹玩家特权MOD"
+      },
+      {
+         "author": "P某 & Deva",
+         "files": [
+            "ServerConnector.py"
+         ],
+         "info": "增强了连接服务器的便捷性",
+         "md5s": [
+            "b1b4be997e3d4dacc33ae4f821d53fd5"
+         ],
+         "name": "服务器连接助手(新)"
+      }
+   ],
+   "num": 2
+}
