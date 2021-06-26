@@ -3,7 +3,7 @@
       {
          "author": "Wsdx233",
          "files": [
-            "WsdxMod/bsLaststandPro.py"
+            "bsLaststandPro.py"
          ],
          "info": "[1.4]尝试炼狱级别的最终杀敌",
          "md5s": [
@@ -14,7 +14,7 @@
       {
          "author": "Wsdx233",
          "files": [
-            "WsdxMod/bsLaststandPro-WithoutShield.py"
+            "bsLaststandPro-WithoutShield.py"
          ],
          "info": "[1.4]最终杀敌战加强！（无护盾）",
          "md5s": [
