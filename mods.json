@@ -43,6 +43,28 @@
             "aa19778c99f1c594d1da4be6121a8b59"
          ],
          "name": "专业版解锁-1.5"
+      },
+      {
+         "author": "Wsdx233",
+         "files": [
+            "chat_exec.py"
+         ],
+         "info": "[1.4]聊天框加/发送可允许python指令(如/bs.message(\"hello\")",
+         "md5s": [
+            "5a1d401dea915ea2916254a3830b26c5"
+         ],
+         "name": "聊天框指令-Python"
+      },
+      {
+         "author": "Wsdx233",
+         "files": [
+            "bsNinjaFight_wsdx.py"
+         ],
+         "info": "[1.4]在忍者的进攻下你能活多久？",
+         "md5s": [
+            "b93cc00783e4bc9e5d928e2ad908e13b"
+         ],
+         "name": "忍者生存战"
       }
    ],
    "num": 2
