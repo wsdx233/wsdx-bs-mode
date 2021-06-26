@@ -65,6 +65,17 @@
             "b93cc00783e4bc9e5d928e2ad908e13b"
          ],
          "name": "忍者生存战"
+      },
+      {
+         "author": "Wsdx233",
+         "files": [
+            "lxz_pro.py"
+         ],
+         "info": "[1.4]陪你一起看流星雨~",
+         "md5s": [
+            "f6d241aff76c3725743b958aa4ac8f01"
+         ],
+         "name": "流星战无限复活"
       }
    ],
    "num": 2
