@@ -1,26 +1,26 @@
 {
    "mods": [
       {
-         "author": "Deva",
+         "author": "Wsdx233",
          "files": [
-            "thank_you_obf.py"
+            "WsdxMod/bsLaststandPro.py"
          ],
-         "info": "众筹玩家可以安装使用，连接IP请输入1.1.1.1进入魔法服或1.1.1.2进入吃鸡服，不是众筹玩家下了也没用哦",
+         "info": "[1.4]尝试炼狱级别的最终杀敌",
          "md5s": [
-            "98b394209dbe40e9496a4ee70b23398e"
+            "10220fddb1d1d907500a729f018dde01"
          ],
-         "name": "众筹玩家特权MOD"
+         "name": "最终杀敌-加强版"
       },
       {
-         "author": "P某 & Deva",
+         "author": "Wsdx233",
          "files": [
-            "ServerConnector.py"
+            "WsdxMod/bsLaststandPro-WithoutShield.py"
          ],
-         "info": "增强了连接服务器的便捷性",
+         "info": "[1.4]最终杀敌战加强！（无护盾）",
          "md5s": [
-            "b1b4be997e3d4dacc33ae4f821d53fd5"
+            "6b8df3893d41ba77866756d5137da351"
          ],
-         "name": "服务器连接助手(新)"
+         "name": "最终杀敌战-加强版-无护盾"
       }
    ],
    "num": 2
