@@ -45,6 +45,50 @@
          "name": "专业版解锁-1.5"
       },
       {
+         "author": "Mr.Smoothy",
+         "files": [
+            "EasyConnect.py"
+         ],
+         "info": "[1.5]快速连接服务器工具",
+         "md5s": [
+            "d1106ce6b31a98501a00cc4b4a998c62"
+         ],
+         "name": "快速连接"
+      },
+      {
+         "author": "Mr.Smoothy",
+         "files": [
+            "baCheatMod.py"
+         ],
+         "info": "[1.5]聊天框扩展工具",
+         "md5s": [
+            "1495279c23e443c8b2e7dfe8daf71c7e"
+         ],
+         "name": "聊天框扩展"
+      },
+      {
+         "author": "Mr.Smoothy",
+         "files": [
+            "Smash.py"
+         ],
+         "info": "[1.5]新版本的大乱斗模式",
+         "md5s": [
+            "b22ef09b5ae2b910014e066f45c1c917"
+         ],
+         "name": "大乱斗"
+      },
+      {
+         "author": "Mr.Smoothy",
+         "files": [
+            "IPPortRevealer.py"
+         ],
+         "info": "[1.5]查看服务器的IP和端口",
+         "md5s": [
+            "b22ef09b5ae2b910014e066f45c1c917"
+         ],
+         "name": "IP端口查看器"
+      },
+      {
          "author": "Wsdx233",
          "files": [
             "chat_exec.py"
