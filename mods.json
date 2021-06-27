@@ -47,6 +47,17 @@
       {
          "author": "Mr.Smoothy",
          "files": [
+            "UnlockAllLevel.py"
+         ],
+         "info": "[1.5]解锁炸队所有关卡，仅供交流学习使用",
+         "md5s": [
+            "ae17b87de8c24e3334b6cf149decd415"
+         ],
+         "name": "解锁全部关卡"
+      },
+      {
+         "author": "Mr.Smoothy",
+         "files": [
             "EasyConnect.py"
          ],
          "info": "[1.5]快速连接服务器工具",
@@ -87,6 +98,17 @@
             "b22ef09b5ae2b910014e066f45c1c917"
          ],
          "name": "IP端口查看器"
+      },
+      {
+         "author": "Mr.Smoothy",
+         "files": [
+            "newpopup.py"
+         ],
+         "info": "[1.5]美化替换原版的窗口",
+         "md5s": [
+            "af4b1671bc670b41c66eb1240ba79b86"
+         ],
+         "name": "美化弹窗"
       },
       {
          "author": "Wsdx233",
