@@ -44,7 +44,7 @@ class MeteorShowerGame(bs.TeamGameActivity):
         
     
     def getInstanceScoreBoardDescription(self):
-        return ('比赛进行中！\n所有参赛者开局有5条生命\n在满天都是黏弹的地图里消灭别人！\n本次比赛最终存活2人获胜！')
+        return ('比赛进行中！\n所有参赛者开局有2点生命\n在满天都是黏弹的地图里消灭别人！\n本次比赛最终存活2人获胜！')
 
     # we're currently hard-coded for one map..
     @classmethod
@@ -165,13 +165,24 @@ class MeteorShowerGame(bs.TeamGameActivity):
                 # the next cycle
                 
                 if m.spaz.getPlayer().gameData['health'] <= 0:
-                    bs.screenMessage(str(m.spaz.getPlayer().getName())+'与世长辞了！')
+                    bs.screenMessage(bs.utf8(m.spaz.getPlayer().getName(icon=False,full=True))+'与世长辞了！')
+                    #bs.screenMessage(
+                    #    bs.Lstr(
+                    #        value='${NAME}与世长辞了！',
+                    #        subs=[('${NAME}', player.getName(full=True))],
+                    #        color=(0, 1, 0)))
                     bs.pushCall(self._checkEndGame)
                     # also record this for a final setting of the clock..
                     self._lastPlayerDeathTime = deathTime
                 else:
                     m.spaz.getPlayer().gameData['health'] = (m.spaz.getPlayer().gameData['health']) - 1
-                    bs.screenMessage(str(m.spaz.getPlayer().getName())+'去世了！ta还有'+str(m.spaz.getPlayer().gameData['health'])+"条命")
+                    bs.screenMessage(bs.utf8(m.spaz.getPlayer().getName(icon=False,full=True))+'去世了！ta还有'+str(m.spaz.getPlayer().gameData['health'])+"条命")
+                    #bs.screenMessage(
+                    #    bs.Lstr(
+                    #        value='${NAME}去世了！ta还有${HP}点生命！',
+                    #        subs=[('${NAME}', player.getName(full=True)),('${HP}', str(m.spaz.getPlayer().gameData['health']))],
+                    #        ))
+                            
                     bs.gameTimer(3000, bs.Call(self.spawnPlayer,m.spaz.getPlayer()))
                     
             else:
