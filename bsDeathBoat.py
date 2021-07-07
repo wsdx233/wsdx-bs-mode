@@ -17,7 +17,8 @@ def bsGetGames():
 
 class PirateBotPro(bs.PirateBot):
     curseTime = 9000
-    defaultShields = True
+    defaultShields = False
+    defaultBoxingGloves = True
 
 class DeathMatchGame(bs.TeamGameActivity):
 
