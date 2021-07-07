@@ -119,11 +119,10 @@ class DeathMatchGame(bs.TeamGameActivity):
 
     def handleMessage(self, m):
     
-    
-        bs.screenMessage(str(len(self._bots.getLivingBots())))
         
         # a spaz-bot has died
         if isinstance(m, bs.SpazBotDeathMessage):
+            self._bots.spawnBot(PirateBotPro,pos=(random.randint(-5,5),5,random.randint(-5,5)), spawnTime=4000, onSpawnCall=self._curs)
             if (random.randint(1,100) >= 95 and (len(self._bots.getLivingBots()) < 3))  :
                 self._bots.spawnBot(PirateBotPro,pos=(random.randint(-5,5),5,random.randint(-5,5)), spawnTime=4000, onSpawnCall=self._curs)
 
