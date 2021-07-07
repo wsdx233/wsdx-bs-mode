@@ -16,7 +16,7 @@ def bsGetGames():
     return [DeathMatchGame]
 
 class PirateBotPro(bs.PirateBot):
-    curseTime = 50000
+    curseTime = 9000
     defaultShields = True
 
 class DeathMatchGame(bs.TeamGameActivity):
@@ -115,16 +115,16 @@ class DeathMatchGame(bs.TeamGameActivity):
         self._bots.spawnBot(PirateBotPro,pos=(-2,5,0), spawnTime=2000)
         
     def _curs(self, game, bot):
-        bot.curseTime = 9999999
+        bot.curseTime = 9999
 
     def handleMessage(self, m):
     
+    
+        bs.screenMessage(str(len(self._bots.getLivingBots())))
         
         # a spaz-bot has died
         if isinstance(m, bs.SpazBotDeathMessage):
-            
-            self._bots.spawnBot(PirateBotPro,pos=(random.randint(-5,5),5,random.randint(-5,5)), spawnTime=2000, onSpawnCall=self._curs)
-            if random.randint(1,100) >= 95 :
+            if (random.randint(1,100) >= 95 and (len(self._bots.getLivingBots()) < 3))  :
                 self._bots.spawnBot(PirateBotPro,pos=(random.randint(-5,5),5,random.randint(-5,5)), spawnTime=4000, onSpawnCall=self._curs)
 
         if isinstance(m, bs.PlayerSpazDeathMessage):
