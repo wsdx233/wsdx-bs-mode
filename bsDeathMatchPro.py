@@ -147,7 +147,7 @@ class DeathMatchGame(bs.TeamGameActivity):
         for team in self.teams:
             self._scoreBoard.setTeamValue(
                 team, team.gameData['score'],
-                team.gameData['score'])
+                1)
 
     def endGame(self):
         results = bs.TeamGameResults()
