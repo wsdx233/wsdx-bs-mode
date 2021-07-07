@@ -5,7 +5,7 @@
 
 
 import bs
-
+import random
 
 def bsGetAPIVersion():
     # see bombsquadgame.com/apichanges
@@ -15,16 +15,19 @@ def bsGetAPIVersion():
 def bsGetGames():
     return [DeathMatchGame]
 
+class PirateBotPro(bs.PirateBot):
+    curseTime = 50000
+    defaultShields = True
 
 class DeathMatchGame(bs.TeamGameActivity):
 
     @classmethod
     def getName(cls):
-        return '别死'
+        return '选拔船员'
 
     @classmethod
     def getDescription(cls, sessionType):
-        return '最少死亡者获胜'
+        return '嘘！别被选上！'
 
     @classmethod
     def supportsSessionType(cls, sessionType):
@@ -77,12 +80,15 @@ class DeathMatchGame(bs.TeamGameActivity):
         self.announcePlayerDeaths = True
 
         self._scoreBoard = bs.ScoreBoard()
+    
+    def _test(*a):
+        bs.screenMessage(str(a))
 
     def getInstanceDescription(self):
-        return ('坚持最少的死亡！')
+        return ('嘘！别被选上！')
 
     def getInstanceScoreBoardDescription(self):
-        return ('坚持最少死亡！')
+        return ('别被选上！逃！')
 
     def onTransitionIn(self):
         bs.TeamGameActivity.onTransitionIn(
@@ -100,14 +106,36 @@ class DeathMatchGame(bs.TeamGameActivity):
         
         self._updateScoreBoard()
         self._dingSound = bs.getSound('dingSmall')
+        
+        
+        # spawn some baddies
+        self._bots = bs.BotSet()
+        
+        
+        self._bots.spawnBot(PirateBotPro,pos=(-2,5,0), spawnTime=2000)
+        
+    def _curs(self, game, bot):
+        bot.curseTime = 9999999
 
     def handleMessage(self, m):
+    
+        
+        # a spaz-bot has died
+        if isinstance(m, bs.SpazBotDeathMessage):
+            
+            self._bots.spawnBot(PirateBotPro,pos=(random.randint(-5,5),5,random.randint(-5,5)), spawnTime=2000, onSpawnCall=self._curs)
+            if random.randint(1,100) >= 95 :
+                self._bots.spawnBot(PirateBotPro,pos=(random.randint(-5,5),5,random.randint(-5,5)), spawnTime=4000, onSpawnCall=self._curs)
 
         if isinstance(m, bs.PlayerSpazDeathMessage):
             bs.TeamGameActivity.handleMessage(
                 self, m)  # augment standard behavior
 
             player = m.spaz.getPlayer()
+            
+            
+            
+            
             self.respawnPlayer(player)
 
             killer = m.killerPlayer
