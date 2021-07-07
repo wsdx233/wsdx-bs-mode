@@ -49,7 +49,7 @@ class MeteorShowerGame(bs.TeamGameActivity):
     # we're currently hard-coded for one map..
     @classmethod
     def getSupportedMaps(cls, sessionType):
-        return ['Courtyard']
+        return ['Courtyard','Rampage']
 
     @classmethod
     def getSettings(cls, sessionType):
@@ -137,7 +137,7 @@ class MeteorShowerGame(bs.TeamGameActivity):
 
         # lets reconnect this player's controls to this
         # spaz but *without* the ability to attack or pick stuff up
-        spaz.connectControlsToPlayer(enableBomb=False)
+        spaz.connectControlsToPlayer(enablePunch=False,enableBomb=False,enablePickUp=False)
 
         # also lets have them make some noise when they die..
         spaz.playBigDeathSound = True
@@ -160,7 +160,7 @@ class MeteorShowerGame(bs.TeamGameActivity):
             # (more accurate looking)
             # in teams/ffa, allow a one-second fudge-factor so we can
             # get more draws
-            if isinstance(self.getSession(), bs.CoopSession):
+            if True :
                 # teams will still show up if we check now.. check in
                 # the next cycle
                 
@@ -241,7 +241,7 @@ class MeteorShowerGame(bs.TeamGameActivity):
         b = bs.Bomb(bombType="sticky",position=position, velocity=velocity,blastRadius=2.2+int(random.random()*5 / 4)).autoRetain()
 
     def _decrementMeteorTime(self):
-        self._meteorTime = max(35, int(self._meteorTime*0.975))
+        self._meteorTime = max(25, int(self._meteorTime*0.975))
 
     def endGame(self):
 
