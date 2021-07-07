@@ -49,7 +49,7 @@ class MeteorShowerGame(bs.TeamGameActivity):
     # we're currently hard-coded for one map..
     @classmethod
     def getSupportedMaps(cls, sessionType):
-        return ['Courtyard','Rampage']
+        return ['Courtyard','Rampage','The Pad']
 
     @classmethod
     def getSettings(cls, sessionType):
@@ -104,7 +104,7 @@ class MeteorShowerGame(bs.TeamGameActivity):
         self._timer.start()
 
         # check for immediate end (if we've only got 1 player, etc)
-        bs.gameTimer(5000, self._checkEndGame)
+        #bs.gameTimer(5000, self._checkEndGame)
 
     def onPlayerJoin(self, player):
         # don't allow joining after we start
@@ -137,7 +137,7 @@ class MeteorShowerGame(bs.TeamGameActivity):
 
         # lets reconnect this player's controls to this
         # spaz but *without* the ability to attack or pick stuff up
-        spaz.connectControlsToPlayer(enablePunch=False,enableBomb=False,enablePickUp=False)
+        spaz.connectControlsToPlayer(enablePunch=False,enableBomb=False,enablePickUp=True)
 
         # also lets have them make some noise when they die..
         spaz.playBigDeathSound = True
@@ -230,7 +230,7 @@ class MeteorShowerGame(bs.TeamGameActivity):
             # drop them somewhere within our bounds with velocity pointing
             # toward the opposite side
             #pos = (-7.3+15.3*random.random(), 11, -5.5+2.1*random.random())
-            pos = (-7.3+15.3*random.random(), 7, -7+3.5*random.random())
+            pos = (-8+17*random.random(), 7, -7+3.5*random.random())
             vel = ((-5.0+random.random()*30.0)
                    * (-1.0 if pos[0] > 0 else 1.0), -3.0, (25.0-random.random()*30.0))
             bs.gameTimer(delay, bs.Call(self._dropBomb, pos, vel))
@@ -238,10 +238,10 @@ class MeteorShowerGame(bs.TeamGameActivity):
         self._setMeteorTimer()
 
     def _dropBomb(self, position, velocity):
-        b = bs.Bomb(bombType="sticky",position=position, velocity=velocity,blastRadius=2.2+int(random.random()*5 / 4)).autoRetain()
+        b = bs.Bomb(bombType=["sticky","normal"][int(random.random()*1.05)],position=position, velocity=velocity,blastRadius=2.2+int(random.random()*5 / 4)).autoRetain()
 
     def _decrementMeteorTime(self):
-        self._meteorTime = max(25, int(self._meteorTime*0.975))
+        self._meteorTime = max(20, int(self._meteorTime*0.9))
 
     def endGame(self):
 
