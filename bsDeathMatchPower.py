@@ -184,6 +184,9 @@ class DeathMatchGame(bs.TeamGameActivity):
         
         spaz.equipBoxingGloves()
         spaz.equipShields()
+        
+        spaz.handleMessage(bs.PowerupMessage('tripleBombs'))
+        spaz.handleMessage(bs.PowerupMessage('impactBombs'))
 
         # lets reconnect this player's controls to this
         # spaz but *without* the ability to attack or pick stuff up
