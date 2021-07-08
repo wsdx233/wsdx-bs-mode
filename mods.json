@@ -36,6 +36,17 @@
       {
          "author": "Wsdx233",
          "files": [
+            "bsChosenOnePro.py"
+         ],
+         "info": "[1.4]（比赛mod）死亡倒计时...",
+         "md5s": [
+            "52323a146e6a3dfc4bce5da5f55c0422"
+         ],
+         "name": "传递诅咒"
+      },
+      {
+         "author": "Wsdx233",
+         "files": [
             "bsDeathMatchPower.py"
          ],
          "info": "[1.4]（比赛mod）自带道具的激战",
@@ -82,7 +93,7 @@
          "files": [
             "UnlockPro_updated.py"
          ],
-         "info": "[1.5]解锁炸队专业版，仅供交流学习使用",
+         "info": "[1.5+]解锁炸队专业版，仅供交流学习使用",
          "md5s": [
             "aa19778c99f1c594d1da4be6121a8b59"
          ],
@@ -93,7 +104,7 @@
          "files": [
             "UnlockAllLevel.py"
          ],
-         "info": "[1.5]解锁炸队所有关卡，仅供交流学习使用",
+         "info": "[1.5+]解锁炸队所有关卡，仅供交流学习使用",
          "md5s": [
             "ae17b87de8c24e3334b6cf149decd415"
          ],
@@ -104,7 +115,7 @@
          "files": [
             "EasyConnect.py"
          ],
-         "info": "[1.5]快速连接服务器工具",
+         "info": "[1.5+]快速连接服务器工具",
          "md5s": [
             "d1106ce6b31a98501a00cc4b4a998c62"
          ],
@@ -115,7 +126,7 @@
          "files": [
             "baCheatMod.py"
          ],
-         "info": "[1.5]聊天框扩展工具",
+         "info": "[1.5+]聊天框扩展工具",
          "md5s": [
             "1495279c23e443c8b2e7dfe8daf71c7e"
          ],
@@ -126,7 +137,7 @@
          "files": [
             "Smash.py"
          ],
-         "info": "[1.5]新版本的大乱斗模式",
+         "info": "[1.5+]新版本的大乱斗模式",
          "md5s": [
             "b22ef09b5ae2b910014e066f45c1c917"
          ],
@@ -137,7 +148,7 @@
          "files": [
             "IPPortRevealer.py"
          ],
-         "info": "[1.5]查看服务器的IP和端口",
+         "info": "[1.5+]查看服务器的IP和端口",
          "md5s": [
             "afb413aec35e514d41c2850e0a27f1e6"
          ],
@@ -148,7 +159,7 @@
          "files": [
             "newpopup.py"
          ],
-         "info": "[1.5]美化替换原版的窗口",
+         "info": "[1.5+]美化替换原版的窗口",
          "md5s": [
             "af4b1671bc670b41c66eb1240ba79b86"
          ],
