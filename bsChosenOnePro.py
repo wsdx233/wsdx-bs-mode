@@ -226,7 +226,7 @@ class ChosenOneGame(bs.TeamGameActivity):
                 
                 #bs.screenMessage(str(totalp))
                 
-                if len(totalp) <= 0 :
+                if len(totalp) <= 1 :
                     self.endGame()
                     return
                 
