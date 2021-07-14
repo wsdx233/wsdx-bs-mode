@@ -1,0 +1,11 @@
+{
+  RelativeLayout;
+  layout_width="fill";
+  layout_height="fill";
+  {
+    LuaWebView;
+    id="web";
+    layout_width="fill";
+    layout_height="fill";
+  };
+};

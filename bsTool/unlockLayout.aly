@@ -1,0 +1,42 @@
+{
+  RelativeLayout;
+  layout_width="fill";
+  background="res/back.jpg";
+  layout_height="fill";
+  {
+    LinearLayout;
+    layout_marginTop="20dp";
+    layout_centerHorizontal="true";
+    orientation="vertical";
+    gravity="center";
+    {
+      TextView;
+      textColor="#ffffff";
+      gravity="center";
+      id="title";
+      text=[==[解锁专业版
+--UnlockPro--]==];
+      textSize="20sp";
+    };
+    {
+      TextView;
+      gravity="center";
+      textColor="#ffffff";
+      text=[==[（支持1.4/1.5)
+本解锁仅供学习交流，请勿用于商业用途
+1.5解锁mod搬运自Ms.Smoothy
+开启后重启游戏生效
+只解锁不加分，请勿用于非法用途！]==];
+      layout_marginTop="10dp";
+    };
+  };
+  {
+    Switch;
+    scaleX="1.3";
+    textColor="#ffffff";
+    gravity="center";
+    scaleY="1.3";
+    id="swit";
+    layout_centerInParent="true";
+  };
+};
