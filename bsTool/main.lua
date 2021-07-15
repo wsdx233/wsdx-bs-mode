@@ -1,5 +1,6 @@
 require "import"
 cjson = require "cjson"
+config = require "config"
 import "android.app.*"
 import "android.os.*"
 import "android.widget.*"
@@ -11,6 +12,9 @@ import "android.graphics.drawable.BitmapDrawable"
 --activity.setTitle('AndroLua+')
 --activity.setTheme(android.R.style.Theme_Holo_Light)
 activity.setContentView(loadlayout(layout))
+
+config.load()
+
 
 function getGameInfo()
   --获取游戏信息
@@ -46,6 +50,7 @@ infoFile = io.open(activity.getLuaDir().."/data/gameinfo.json","w")
 infoFile:write(cjson.encode(sinfo))
 infoFile:flush()
 infoFile:close()
+sinfo = nil
 --保存读取的数据
 
 fileOld = File("/sdcard/BombSquad/UnlockPro.py")
@@ -125,7 +130,7 @@ function onOptionsItemSelected(t)
     ["启动游戏"] = function()
 
     end;
-    ["模组管理"] = function()
+    ["管理模组"] = function()
 
     end
   }

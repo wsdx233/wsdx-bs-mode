@@ -96,9 +96,26 @@ class DeathMatchGame(bs.TeamGameActivity):
             self, music='Epic' if self.settings['Epic Mode'] else 'ToTheDeath')
 
     def onTeamJoin(self, team):
+        if self.hasBegun():
+            return
         team.gameData['score'] = 0
         if self.hasBegun():
             self._updateScoreBoard()
+    
+
+    def onPlayerJoin(self, player):
+        # don't allow joining after we start
+        # (would enable leave/rejoin tomfoolery)
+        if self.hasBegun():
+            bs.screenMessage(
+                bs.Lstr(
+                    resource='playerDelayedJoinText',
+                    subs=[('${PLAYER}', player.getName(full=True))]),
+                color=(0, 1, 0))
+            # for score purposes, mark them as having died right as the
+            # game started
+            return
+        self.spawnPlayer(player)
 
     def onBegin(self):
         bs.TeamGameActivity.onBegin(self)
@@ -176,6 +193,14 @@ class DeathMatchGame(bs.TeamGameActivity):
             self._scoreBoard.setTeamValue(
                 team, team.gameData['score'],
                 1)
+    
+    def spawnPlayer(self, player):
+
+        spaz = self.spawnPlayerSpaz(player)
+
+        # lets reconnect this player's controls to this
+        # spaz but *without* the ability to attack or pick stuff up
+        spaz.connectControlsToPlayer(enablePunch=False,enableBomb=False,enablePickUp=True)
 
     def endGame(self):
         results = bs.TeamGameResults()

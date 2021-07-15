@@ -86,12 +86,29 @@ class ChosenOneGame(bs.TeamGameActivity):
             self, music='Epic' if self.settings['Epic Mode'] else 'Chosen One')
 
     def onTeamJoin(self, team):
+        if self.hasBegun():
+            return
         team.gameData['timeRemaining'] = self.settings["Chosen One Time"]
         self._updateScoreBoard()
         
-    def onPlayerJoin(self,player):
+        
+    def onPlayerJoin(self, player):
+        # don't allow joining after we start
+        # (would enable leave/rejoin tomfoolery)
+        if self.hasBegun():
+            bs.screenMessage(
+                bs.Lstr(
+                    resource='playerDelayedJoinText',
+                    subs=[('${PLAYER}', player.getName(full=True))]),
+                color=(0, 1, 0))
+            # for score purposes, mark them as having died right as the
+            # game started
+            return
         player.gameData['die'] = False
         bs.TeamGameActivity.onPlayerJoin(self, player)
+    
+    #def onPlayerJoin(self,player):
+        
 
     def onPlayerLeave(self, player):
         bs.TeamGameActivity.onPlayerLeave(self, player)
