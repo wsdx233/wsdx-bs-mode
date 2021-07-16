@@ -11,6 +11,13 @@
 ### 炸队工具箱(新版) **(推荐)**
 Wsdx233炸队工具箱1.0 alpha已自带该mod仓库的下载功能。
 
+### Linux版管理器
+复制以下命令，在Linux系统执行。
+支持不安装或安装**Python3**的设备!
+`wget  -O install.sh https://gitee.com/wsdx233/wsdx-bs-mode/raw/master/managers/install.sh
+bash install.sh
+`
+
 ### 炸队mod
 使用Deva开发的炸队mod可以导入该仓库作为下载源。
 1. 在侧滑中打开“**第三方mod源**”。
