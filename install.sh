@@ -15,4 +15,4 @@ echo 正在Mod管理器
 wget https://gitee.com/wsdx233/wsdx-bs-mode/raw/master/managers/bsmodins.py
 
 echo 启动Mod管理器
-python bsmodins.py
+python managers/bsmodins.py
