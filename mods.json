@@ -198,9 +198,9 @@
             "chinese_wyw.json",
             "wywLanguage.py"
          ],
-         "info": "[1.5+](请读说明)无root安装文言文语言包",
+         "info": "[1.5+][请读说明]无root安装文言文语言包",
          "md5s": [
-            "7689a854854d44b5844706952fbff4b2",
+            "6435907729920b3dccad33c26aa16270",
             "3dcb20663b7d7feaccd90d4c39864ed1"
          ],
          "name": "文言文"
