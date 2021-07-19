@@ -171,6 +171,17 @@
          "name": "大乱斗"
       },
       {
+         "author": "wsdx233",
+         "files": [
+            "PricticeW.py"
+         ],
+         "info": "[1.5+]打沙袋~",
+         "md5s": [
+            "45b3248f51c8a9febf410965ba6b5c3b"
+         ],
+         "name": "打沙袋"
+      },
+      {
          "author": "Mr.Smoothy",
          "files": [
             "IPPortRevealer.py"
