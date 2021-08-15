@@ -182,6 +182,17 @@
          "name": "打沙袋"
       },
       {
+         "author": "wsdx233",
+         "files": [
+            "brp_helper.py"
+         ],
+         "info": "[1.5+]录像助手(重定向brp路径到/BombSquad/中)",
+         "md5s": [
+            "2d4dc3594635ab96562e7f0daea80e3d"
+         ],
+         "name": "录像助手"
+      },
+      {
          "author": "Mr.Smoothy",
          "files": [
             "IPPortRevealer.py"
