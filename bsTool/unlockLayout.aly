@@ -21,6 +21,7 @@
     {
       TextView;
       gravity="center";
+      id="desc";
       textColor="#ffffff";
       text=[==[（支持1.4/1.5)
 本解锁仅供学习交流，请勿用于商业用途

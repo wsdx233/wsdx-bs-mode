@@ -1,6 +1,7 @@
 require "import"
 cjson = require "cjson"
 config = require "config"
+gani = require "more.animator"
 import "android.app.*"
 import "android.os.*"
 import "android.widget.*"
@@ -15,6 +16,8 @@ activity.setContentView(loadlayout(layout))
 
 config.load()
 
+gani("main")
+--获取执行动画
 
 function getGameInfo()
   --获取游戏信息
@@ -128,13 +131,22 @@ function onOptionsItemSelected(t)
   t = tostring(t)
   local actions = {
     ["启动游戏"] = function()
-
+      packageName="net.froemling.bombsquad"
+      import "android.content.Intent"
+      import "android.content.pm.PackageManager"
+      manager = activity.getPackageManager()
+      open = manager.getLaunchIntentForPackage(packageName)
+      this.startActivity(open)
     end;
     ["管理模组"] = function()
-
+      print("下载“炸队mod管理器”以更好地管理炸队mod。\n详情见关于链接。")
     end
   }
   actions[t]()
+end
+
+r2.onClick = function()
+  activity.newActivity("more/about")
 end
 
 bsIcon.onClick = function(v)
@@ -151,6 +163,30 @@ bsIcon.onLongClick = function(v)
   .setTitle("游戏操作")
   .setItems(items,{onClick=function(dialog,index)
       local selectItem=items[index+1]
+      local actions = {
+        ["卸载游戏"] = function()
+          import "android.net.Uri"
+          import "android.content.Intent"
+          uri = Uri.parse("package:net.froemling.bombsquad")
+          intent = Intent(Intent.ACTION_DELETE,uri)
+          activity.startActivity(intent)
+        end;
+        ["更改包名"] = function()
+          print("改🔨,👴不想写")
+        end;
+        ["更改模组路径"] = function()
+          print("改🔨,👴不想写")
+        end;
+        ["转到设置"] = function()
+          print("请问宁没✋🐴？")
+        end;
+        ["清除所有mod"] = function()
+          print("请问宁没✋🐴？")
+        end
+      }
+
+      actions[selectItem]()
+
   end})
   .setPositiveButton("关闭",nil)
   .show()

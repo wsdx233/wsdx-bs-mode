@@ -38,6 +38,9 @@ Http.get(link.."mods.json",function(code,con)
       end
       v.has = false
     end
+    v.info = string.gsub(v.info,"%[.-%]",function(str)
+      return "<font color=\"#ae"..tostring((string.byte(string.sub(str,#str-1))*433)).."\">"..str.."</font>"
+    end)
     data.append("<br>")
     local tag = "<p>"
     tag = tag .. "<b font-size=\"200%\">"..v.name.."</b>" .. "<br>"
@@ -117,7 +120,7 @@ web.setWebViewClient{
               end
             end;
             ["编辑模组"] = function()
-
+              
             end;
             ["更新/重下"] = function()
               local results = {}

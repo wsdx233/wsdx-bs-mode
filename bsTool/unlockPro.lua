@@ -6,6 +6,12 @@ import "java.io.File"
 
 activity.setContentView(loadlayout(unlockLayout))
 
+gani = require "more.animator"
+gani("ulpro")
+--获取执行动画
+
+activity.setTitle("解锁专业版")
+activity.actionBar.setSubtitle("解锁全版本炸队专业版")
 
 modOld = io.open(activity.getLuaDir().."/mods/UnlockPro.py","r"):read("*a")
 modNew = io.open(activity.getLuaDir().."/mods/UnlockPro_FA.py","r"):read("*a")

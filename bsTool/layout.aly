@@ -33,6 +33,7 @@ mod数：未知
   };
   {
     RelativeLayout;
+    id="btm_lay";
     layout_height="fill";
     layout_below="top";
     layout_width="fill";
@@ -114,7 +115,7 @@ mod数：未知
                     layout_width="match_parent";
                     {
                       TextView;
-                      text="解锁炸队专业版\n1.4/1.5/1.6均可使用";
+                      text="解锁炸队专业版\n全版本";
                       textSize="12sp";
                       layout_width="match_parent";
                       layout_height="match_parent";
@@ -275,7 +276,7 @@ mod数：未知
                     layout_width="match_parent";
                     {
                       TextView;
-                      text="修改插件\n仅1.4";
+                      text="修改插件\n敬请期待~";
                       textSize="12sp";
                       layout_width="match_parent";
                       layout_height="match_parent";
