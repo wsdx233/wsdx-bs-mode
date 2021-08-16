@@ -23,9 +23,9 @@
       gravity="center";
       id="desc";
       textColor="#ffffff";
-      text=[==[（支持1.4/1.5)
+      text=[==[（支持1.4/1.5/1.6)
 本解锁仅供学习交流，请勿用于商业用途
-1.5解锁mod搬运自Ms.Smoothy
+1.5+解锁mod搬运自Ms.Smoothy
 开启后重启游戏生效
 只解锁不加分，请勿用于非法用途！]==];
       layout_marginTop="10dp";

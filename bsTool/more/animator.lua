@@ -1,14 +1,16 @@
 --加入动画
-
+--导入类
 import "android.animation.ObjectAnimator"
+
 
 local function obj_ani_float(wts,name,from,to)
   for k,v in pairs(wts) do
-      local ani = ObjectAnimator.ofFloat(v,name,{from,to})
-      ani.setDuration(700)
-      ani.start()
+    local ani = ObjectAnimator.ofFloat(v,name,{from,to})
+    ani.setDuration(700)
+    ani.start()
   end
 end
+
 
 local function alpha_ani(wts)
   obj_ani_float(wts,"alpha",0,1)
@@ -24,8 +26,8 @@ local function scale_ani(wts)
 end
 
 local function both_ani(wts)
-    alpha_ani(wts)
-    upmove_ani(wts)
+  alpha_ani(wts)
+  upmove_ani(wts)
 end
 
 local animators = {

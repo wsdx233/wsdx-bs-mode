@@ -4,8 +4,13 @@
   layout_height="fill";
   {
     LuaWebView;
-    id="web";
     layout_width="fill";
+    id="web";
     layout_height="fill";
+  };
+  {
+    ProgressBar;
+    id="loading";
+    layout_centerInParent="true";
   };
 };

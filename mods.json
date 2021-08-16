@@ -220,11 +220,20 @@
             "chinese_wyw.json",
             "wywLanguage.py"
          ],
-         "info": "[1.5+][请读说明]无root安装文言文语言包",
+         "info": "[1.5.2+][请读说明]无root安装文言文语言包",
          "md5s": [
             "6435907729920b3dccad33c26aa16270",
             "55606aea86a0672b64613bf75229b854"
          ],
+         "more": {
+            "adjust": 1.5,
+            "minfo": "####\n文言文安装器\n\n使用方法说明：\n安装器适应1.5.3+的炸队\n(因为mod机制)\n\n下载后重启游戏，打开设置>插件启用\nInstaller，启用后再次重启游戏，即可在语言中找到chinese_wyw语言。\n\n安装完成后可以删除mod。\n\n注意：mod自带卸载器和安装器(Installer和UnInstaller)请勿同时打开！",
+            "verson": {
+               "code": "2",
+               "name": "1.1",
+               "time": "2021年7月"
+            }
+         },
          "name": "文言文"
       },
       {

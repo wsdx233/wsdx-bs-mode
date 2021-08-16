@@ -57,6 +57,7 @@ Http.get(link.."mods.json",function(code,con)
     data.append(tag)
   end
   web.loadData(data.toString(),"text/html","utf-8")
+  loading.visibility = 8
 end)
 
 web.setWebViewClient{
@@ -159,6 +160,7 @@ web.setWebViewClient{
   end,
   onPageFinished=function(view,url)
     --网页加载完成
+    
     view.goBack()
   end
 }
