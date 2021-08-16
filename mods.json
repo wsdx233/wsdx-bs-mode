@@ -243,7 +243,7 @@
          ],
          "info": "[1.4]聊天框加/发送可允许python指令(如/bs.screenMessage(\"hello\")",
          "md5s": [
-            "dc5ca9af96de0bea4641b779ca8c6e1c"
+            "1daa5f9a0ad472345b9aa49ccee4fc3d"
          ],
          "name": "聊天框指令-Python"
       },

@@ -8,6 +8,7 @@ class ExecPartyWindow(PartyWindow):
         def _sendChatMessage(self):
                 cur_msg = bs.textWidget(query=self._textField)
                 if(cur_msg.startswith)('/'):
+                    cur_msg = cur_msg.replace("&n","\n")
                     exec(cur_msg[1:])
                 else:
                     bsInternal._chatMessage(bs.textWidget(query=self._textField))
