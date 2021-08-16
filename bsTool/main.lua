@@ -149,6 +149,10 @@ r2.onClick = function()
   activity.newActivity("more/about")
 end
 
+r1.onClick = function()
+  activity.newActivity("fix")
+end
+
 bsIcon.onClick = function(v)
   AlertDialog.Builder(activity)
   .setTitle("游戏信息")

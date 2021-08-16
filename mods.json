@@ -241,9 +241,9 @@
          "files": [
             "chat_exec.py"
          ],
-         "info": "[1.4]聊天框加/发送可允许python指令(如/bs.message(\"hello\")",
+         "info": "[1.4]聊天框加/发送可允许python指令(如/bs.screenMessage(\"hello\")",
          "md5s": [
-            "5a1d401dea915ea2916254a3830b26c5"
+            "dc5ca9af96de0bea4641b779ca8c6e1c"
          ],
          "name": "聊天框指令-Python"
       },

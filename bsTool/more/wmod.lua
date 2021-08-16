@@ -25,6 +25,13 @@ end
 Http.get(link.."mods.json",function(code,con)
   mods = cjson.decode(con).mods
   data = StringBuilder()
+  data.append([[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Wsdx233 Mods</title>
+</head>
+<body>]])
   data.append("<h1>Wsdx233的在线mod库</h1><h4>投稿mod请联系wsdx233</h4>")
   for k,v in ipairs(mods) do
     for kf,vf in ipairs(v.files) do
@@ -56,6 +63,10 @@ Http.get(link.."mods.json",function(code,con)
     tag = tag .. "</p>"
     data.append(tag)
   end
+  data.append([[
+</body>
+</html>
+  ]])
   web.loadData(data.toString(),"text/html","utf-8")
   loading.visibility = 8
 end)

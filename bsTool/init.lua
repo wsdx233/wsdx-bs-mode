@@ -1,6 +1,6 @@
 appname="炸队工具箱"
-appver="1.0 alpha"
-appcode="5"
+appver="1.1.1 alpha"
+appcode="10"
 appsdk="15"
 path_pattern=""
 packagename="com.Wsdx233.bstool_lua"

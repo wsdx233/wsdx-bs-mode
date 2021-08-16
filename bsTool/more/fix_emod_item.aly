@@ -1,0 +1,24 @@
+{
+  RelativeLayout;
+  layout_width="fill";
+  layout_height="wrap";
+  padding="10dp";
+  {
+    LinearLayout;
+    layout_marginLeft="10dp";
+    layout_centerVertical="true";
+    orientation="vertical";
+    {
+      TextView;
+      id="name";
+      textSize="20sp";
+      text="Title";
+    };
+    {
+      TextView;
+      textSize="14sp";
+      id="value";
+      text="infomation";
+    };
+  };
+};
