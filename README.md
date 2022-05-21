@@ -14,20 +14,20 @@ Wsdx233炸队工具箱1.0 alpha已自带该mod仓库的下载功能。
 ### Linux版管理器
 复制以下命令，在Linux系统执行。
 支持不安装或安装**Python3**的设备!
-`wget  -O install.sh https://gitee.com/wsdx233/wsdx-bs-mode/raw/master/managers/install.sh
+`wget  -O install.sh https://raw.githubusercontent.com/wsdx233/wsdx-bs-mode/master/managers/install.sh
 bash install.sh
 `
 
 ### 炸队mod
 使用Deva开发的炸队mod可以导入该仓库作为下载源。
 1. 在侧滑中打开“**第三方mod源**”。
-2. 点击右下角添加该仓库，地址`https://gitee.com/wsdx233/wsdx-bs-mode/raw/master/`
+2. 点击右下角添加该仓库，地址`https://raw.githubusercontent.com/wsdx233/wsdx-bs-mode/master/`
 3. 点击查看即可进入mod源
 
 ### 模组管理器
 使用Wsdx233的模组管理器可以访问该仓库。
 1. 点击**第三方mod源**
-2. 输入仓库链接`https://gitee.com/wsdx233/wsdx-bs-mode/raw/master/mods.json`查看
+2. 输入仓库链接`https://raw.githubusercontent.com/wsdx233/wsdx-bs-mode/master/mods.json`查看
 
 ## 协助开发
 如果您有开发的兴趣和能力，可以协助我一起开发和维护这个仓库。您的协作会给我们带来无与伦比的惊喜！
